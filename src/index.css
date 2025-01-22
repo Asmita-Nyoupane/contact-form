@@ -1,16 +1,6 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.label {
-  @apply text-start font-semibold text-gray-700;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-.field {
-  @apply w-full  text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-0;
-}
-.field-container {
-  @apply relative flex items-center border rounded-lg shadow-sm focus-within:ring-2 focus-within:ring-blue-500 p-1;
-}
-.icon {
-  @apply flex items-center justify-center  text-gray-500 mr-2;
-} */

@@ -1,18 +1,11 @@
-const Input = ({
-  label,
-  type = "text",
-  placeholder,
-  icon: Icon,
-  size,
-  ...props
-}) => {
+const Input = ({ label, type = "text", placeholder, icon: Icon, ...props }) => {
   return (
     <div className="field-wrapper">
-      <label className={`label ${size}`}>{label}</label>
+      <label className="label">{label}</label>
 
       <div className="input-with-icon">
         {Icon && (
-          <span className={`icon  ${size}`}>
+          <span className="icon">
             <Icon />
           </span>
         )}
@@ -20,7 +13,7 @@ const Input = ({
         <input
           type={type}
           placeholder={placeholder}
-          className={`field ${size}`}
+          className="field"
           {...props}
         />
       </div>
