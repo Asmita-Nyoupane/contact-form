@@ -1,19 +1,3 @@
-export const labelClasses = {
-  sm: "text-sm  lg:text-md",
-  md: "text-md lg:text-base ",
-  lg: "text-base lg:text-lg ",
-};
-
-export const iconClasses = {
-  sm: "h-4 w-4",
-  md: "h-5 w-5",
-  lg: "h-10 w-10",
-};
-export const fieldContainer = {
-  m: "p-10",
-  md: "p-8 ",
-  lg: "p-1",
-};
 const Input = ({
   label,
   type = "text",
@@ -23,11 +7,12 @@ const Input = ({
   ...props
 }) => {
   return (
-    <div className="flex  flex-start flex-col gap-3">
-      <label className={`label ${labelClasses[size]}`}>{label}</label>
-      <div className={`field-container ${fieldContainer[size]}`}>
+    <div className="field-wrapper">
+      <label className={`label ${size}`}>{label}</label>
+
+      <div className="input-with-icon">
         {Icon && (
-          <span className={`icon justify-start ${iconClasses[size]}`}>
+          <span className={`icon  ${size}`}>
             <Icon />
           </span>
         )}
@@ -35,7 +20,7 @@ const Input = ({
         <input
           type={type}
           placeholder={placeholder}
-          className={`field `}
+          className={`field ${size}`}
           {...props}
         />
       </div>
